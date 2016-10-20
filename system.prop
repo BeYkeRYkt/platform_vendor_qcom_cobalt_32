@@ -82,6 +82,7 @@ qcom.bluetooth.soc=cherokee
 ro.bluetooth.a4wp=false
 
 #system prop for wipower support
+ro.bluetooth.emb_wp_mode=true
 ro.bluetooth.wipower=true
 
 #
@@ -119,13 +120,6 @@ ro.hwui.text_small_cache_width=1024
 ro.hwui.text_small_cache_height=1024
 ro.hwui.text_large_cache_width=2048
 ro.hwui.text_large_cache_height=1024
-
-#config for bringup
-config.disable_telephony=true
-config.disable_networktime=true
-config.disable_atlas=true
-debug.sf.nobootanimation=1
-debug.batt.no_battery=true
 
 # enable navigation bar
 qemu.hw.mainkeys=0
