@@ -1,4 +1,4 @@
-DEVICE_PACKAGE_OVERLAYS := device/qcom/msmcobalt_32/overlay
+DEVICE_PACKAGE_OVERLAYS := device/qcom/msm8998_32/overlay
 TARGET_KERNEL_VERSION := 4.4
 BOARD_HAVE_QCOM_FM := true
 TARGET_ENABLE_QC_AV_ENHANCEMENTS := true
@@ -8,8 +8,8 @@ TARGET_USE_UI_SVA := true
 
 # Video codec configuration files
 ifeq ($(TARGET_ENABLE_QC_AV_ENHANCEMENTS), true)
-PRODUCT_COPY_FILES += device/qcom/msmcobalt/media_profiles.xml:system/etc/media_profiles.xml \
-                      device/qcom/msmcobalt/media_codecs.xml:system/etc/media_codecs.xml
+PRODUCT_COPY_FILES += device/qcom/msm8998/media_profiles.xml:system/etc/media_profiles.xml \
+                      device/qcom/msm8998/media_codecs.xml:system/etc/media_codecs.xml
 endif #TARGET_ENABLE_QC_AV_ENHANCEMENTS
 
 #QTIC flag
@@ -18,8 +18,8 @@ endif #TARGET_ENABLE_QC_AV_ENHANCEMENTS
 
 $(call inherit-product, device/qcom/common/common.mk)
 
-PRODUCT_NAME := msmcobalt_32
-PRODUCT_DEVICE := msmcobalt_32
+PRODUCT_NAME := msm8998_32
+PRODUCT_DEVICE := msm8998_32
 PRODUCT_BRAND := Android
 
 # default is nosdcard, S/W button enabled in resource
@@ -46,18 +46,18 @@ PRODUCT_BOOT_JARS += qcom.fmradio
 endif #BOARD_HAVE_QCOM_FM
 
 # Audio configuration file
--include $(TOPDIR)hardware/qcom/audio/configs/msmcobalt/msmcobalt.mk
+-include $(TOPDIR)hardware/qcom/audio/configs/msm8998/msm8998.mk
 
 PRODUCT_PACKAGE_OVERLAYS := $(QCPATH)/qrdplus/Extension/res \
         $(PRODUCT_PACKAGE_OVERLAYS)
 
 # Sensor HAL conf file
 PRODUCT_COPY_FILES += \
-    device/qcom/msmcobalt_32/sensors/hals.conf:system/etc/sensors/hals.conf
+    device/qcom/msm8998_32/sensors/hals.conf:system/etc/sensors/hals.conf
 
 # WLAN driver configuration file
 PRODUCT_COPY_FILES += \
-    device/qcom/msmcobalt_32/WCNSS_qcom_cfg.ini:system/etc/wifi/WCNSS_qcom_cfg.ini
+    device/qcom/msm8998_32/WCNSS_qcom_cfg.ini:system/etc/wifi/WCNSS_qcom_cfg.ini
 
 PRODUCT_PACKAGES += \
     wpa_supplicant_overlay.conf \
@@ -86,7 +86,7 @@ PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.sensor.hifi_sensors.xml:system/etc/permissions/android.hardware.sensor.hifi_sensors.xml
 
 # MSM IRQ Balancer configuration file
-PRODUCT_COPY_FILES += device/qcom/msmcobalt_32/msm_irqbalance.conf:system/vendor/etc/msm_irqbalance.conf
+PRODUCT_COPY_FILES += device/qcom/msm8998_32/msm_irqbalance.conf:system/vendor/etc/msm_irqbalance.conf
 
 #for android_filesystem_config.h
 PRODUCT_PACKAGES += \

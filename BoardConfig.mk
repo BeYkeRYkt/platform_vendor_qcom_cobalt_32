@@ -3,8 +3,8 @@
 # Product-specific compile-time definitions.
 #
 
-TARGET_BOARD_PLATFORM := msmcobalt
-TARGET_BOOTLOADER_BOARD_NAME := msmcobalt
+TARGET_BOARD_PLATFORM := msm8998
+TARGET_BOOTLOADER_BOARD_NAME := msm8998
 TARGET_BOARD_SUFFIX := _32
 
 ifeq ($(TARGET_ARCH),)
@@ -23,7 +23,7 @@ BOOTLOADER_GCC_VERSION := arm-eabi-4.8
 TARGET_USES_UEFI := true
 TARGET_NO_KERNEL := false
 BOARD_PRESIL_BUILD := true
--include $(QCPATH)/common/msmcobalt_32/BoardConfigVendor.mk
+-include $(QCPATH)/common/msm8998_32/BoardConfigVendor.mk
 MINIMAL_FONT_FOOTPRINT := true
 
 # Some framework code requires this to enable BT
@@ -59,7 +59,7 @@ endif
 BOARD_KERNEL_CMDLINE += boot_cpus=0-3 androidboot.hardware=qcom user_debug=31 msm_rtb.filter=0x37 ehci-hcd.park=3 lpm_levels.sleep_disabled=1 sched_enable_hmp=1 sched_enable_power_aware=1 androidboot.selinux=permissive service_locator.enable=1
 endif
 
-BOARD_EGL_CFG := device/qcom/msmcobalt_32/egl.cfg
+BOARD_EGL_CFG := device/qcom/msm8998_32/egl.cfg
 
 BOARD_KERNEL_BASE        := 0x00000000
 BOARD_KERNEL_PAGESIZE    := 4096
