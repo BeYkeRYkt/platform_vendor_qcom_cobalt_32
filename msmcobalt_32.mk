@@ -2,6 +2,10 @@ DEVICE_PACKAGE_OVERLAYS := device/qcom/msmcobalt_32/overlay
 TARGET_KERNEL_VERSION := 4.4
 BOARD_HAVE_QCOM_FM := true
 TARGET_ENABLE_QC_AV_ENHANCEMENTS := true
+
+# enable the SVA in UI area
+TARGET_USE_UI_SVA := true
+
 # Video codec configuration files
 ifeq ($(TARGET_ENABLE_QC_AV_ENHANCEMENTS), true)
 PRODUCT_COPY_FILES += device/qcom/msmcobalt/media_profiles.xml:system/etc/media_profiles.xml \
