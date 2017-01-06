@@ -85,6 +85,10 @@ PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.sensor.relative_humidity.xml:system/etc/permissions/android.hardware.sensor.relative_humidity.xml \
     frameworks/native/data/etc/android.hardware.sensor.hifi_sensors.xml:system/etc/permissions/android.hardware.sensor.hifi_sensors.xml
 
+# FBE support
+PRODUCT_COPY_FILES += \
+    device/qcom/msm8998_32/init.qti.qseecomd.sh:system/bin/init.qti.qseecomd.sh
+
 # MSM IRQ Balancer configuration file
 PRODUCT_COPY_FILES += device/qcom/msm8998_32/msm_irqbalance.conf:system/vendor/etc/msm_irqbalance.conf
 
