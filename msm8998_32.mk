@@ -12,6 +12,8 @@ PRODUCT_COPY_FILES += device/qcom/msm8998/media_profiles.xml:system/etc/media_pr
                       device/qcom/msm8998/media_codecs.xml:system/etc/media_codecs.xml
 endif #TARGET_ENABLE_QC_AV_ENHANCEMENTS
 
+PRODUCT_COPY_FILES += device/qcom/msm8998_32/whitelistedapps.xml:system/vendor/etc/whitelistedapps.xml
+
 #QTIC flag
 -include $(QCPATH)/common/config/qtic-config.mk
 
