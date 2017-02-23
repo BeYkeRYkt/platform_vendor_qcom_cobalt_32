@@ -373,3 +373,9 @@ on property:init.svc.zygote=restarting
 #    socket vqtss stream 0660 system system
 #    user system
 #    group system
+
+service energy-awareness /system/bin/energy-awareness
+    class main
+    user system
+    group system
+    oneshot
