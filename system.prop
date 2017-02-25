@@ -133,3 +133,19 @@ qemu.hw.mainkeys=0
 
 #Increase cached app limit
 ro.sys.fw.bg_apps_limit=60
+
+#Settings to enable sensors
+#Device Orientation sensor
+ro.qti.sensors.dev_ori=true
+#Persistent Motion Detector
+ro.qti.sensors.pmd=true
+#Stationary Detector
+ro.qti.sensors.sta_detect=true
+#Motion Detector
+ro.qti.sensors.mot_detect=true
+#Device Position Classifier
+ro.qti.sensors.dpc=true
+#MultiShake sensor
+ro.qti.sensors.multishake=true
+#IOD sensor
+ro.qti.sensors.iod=true
