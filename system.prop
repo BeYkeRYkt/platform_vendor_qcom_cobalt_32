@@ -100,6 +100,13 @@ persist.data.df.mux_count=8
 persist.data.df.iwlan_mux=9
 persist.data.df.dev_name=rmnet_usb0
 
+#
+# system property determining camera HAL to be used for a Video call
+#
+# 1 is camera1
+# 2 or anything else is camera2
+persist.radio.VT_CAM_INTERFACE=2
+
 #property to enable user to access Google WFD settings
 persist.debug.wfd.enable=1
 ##property to choose between virtual/external wfd display
@@ -107,6 +114,9 @@ persist.sys.wfd.virtual=0
 
 # system prop for NFC DT
 ro.nfc.port=I2C
+
+#property for vendor specific library
+ro.vendor.at_library=libqti-at.so
 
 #hwui properties
 ro.hwui.texture_cache_size=72
@@ -126,3 +136,19 @@ qemu.hw.mainkeys=0
 
 #Increase cached app limit
 ro.sys.fw.bg_apps_limit=60
+
+#Settings to enable sensors
+#Device Orientation sensor
+ro.qti.sensors.dev_ori=true
+#Persistent Motion Detector
+ro.qti.sensors.pmd=true
+#Stationary Detector
+ro.qti.sensors.sta_detect=true
+#Motion Detector
+ro.qti.sensors.mot_detect=true
+#Device Position Classifier
+ro.qti.sensors.dpc=true
+#MultiShake sensor
+ro.qti.sensors.multishake=true
+#IOD sensor
+ro.qti.sensors.iod=true
